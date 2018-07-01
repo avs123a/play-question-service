@@ -1,4 +1,76 @@
-This is your new Play application
-=================================
+DEMO API: https://question-java-spring.herokuapp.com/ + API URL
 
-This file will be packaged with your application, when using `activator dist`.
+Texhnologies:
+
+Java 8;
+
+Play framework 2.5;
+
+SBT assembly;
+
+Hibernate;
+
+PostgreSQL database
+
+Requirements:
+
+Java 8;
+
+SBT;
+
+PostgreSQL (version 10 is prefer)
+
+Installation:
+1.) Clone this repository or download and extract source 
+
+2.) Open with IDE that support SBT (for example, Intellij IDEA, Eclipse) 
+
+3.) in file \conf\application.conf change database database url, username and password; 
+
+4.) Run command:  sbt run and input url in your browser: localhost:9000.
+
+NOTE!!! IF YOU WANT TO USE SPA(Single Page Application) client like Angular or React, enable CORS
+
+HTTP REQUESTS:
+
+Fields:
+
+GET: domain_name/field/list - get all fields
+
+GET: domain_name/field/active-list - get all active fields (status: is Active)
+
+POST: domain_name/field/add - create field
+
+GET: domain_name/field/view/:id - get field details by field ID
+
+PUT: domain_name/field/update/:id - update field with this ID
+
+DELETE: domain_name/field/delete/:id - delete field by field ID
+
+Users:
+
+GET: domain_name/user/list - get all users
+
+POST: domain_name/user/add - registration (adding user)
+
+POST: domain_name/user/auth - find user by email and password for authentication
+
+GET: domain_name/user/view/:id - get user information by user ID
+
+PUT: domain_name/user/update/:id - update user (resave user) with this ID
+
+DELETE: domain_name/user/delete/:id - delete user by user ID
+
+Responses(Answers)
+
+GET: domain_name/response/list - get all responses
+
+POST: domain_name/response/add - create response
+
+GET: domain_name/response/view/:id - get response details by response ID
+
+GET: domain_name/response/user-list/:user-id - get response details by User ID
+
+PUT: domain_name/response/update/:id - update response with this ID
+
+DELETE: domain_name/response/delete/:id - delete response by response ID
