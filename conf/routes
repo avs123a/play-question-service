@@ -1,0 +1,33 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Users
+GET     /                              controllers.UserController.index()
+GET     /user/list                     controllers.UserController.listUser()
+GET     /user/view/:id                 controllers.UserController.getUser(id: Long)
+POST    /user/add                      controllers.UserController.addUser()
+POST    /user/auth                     controllers.UserController.searchUserToAuth()
+PUT     /user/update/:id               controllers.UserController.updateUser(id: Long)
+DELETE  /user/delete/:id               controllers.UserController.deleteUser(id: Long)
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file                  controllers.Assets.versioned(path="/public", file: Asset)
+
+# Fields
+GET     /field/list                    controllers.FieldController.listField()
+GET     /field/active-list             controllers.FieldController.listActiveField()
+GET     /field/view/:id                controllers.FieldController.getField(id: Long)
+POST    /field/add                     controllers.FieldController.addField()
+PUT     /field/update/:id              controllers.FieldController.updateField(id: Long)
+DELETE  /field/delete/:id              controllers.FieldController.deleteField(id: Long)
+
+# Responses
+GET     /response/list                 controllers.ResponseController.listResponse()
+GET     /response/user-list/:userId    controllers.ResponseController.listUserResponse(userId: Long)
+GET     /response/view/:id             controllers.ResponseController.getResponse(id: Long)
+POST    /response/add                  controllers.ResponseController.addResponse()
+PUT     /response/update/:id           controllers.ResponseController.updateResponse(id: Long)
+DELETE  /response/delete/:id           controllers.ResponseController.deleteResponse(id: Long)
